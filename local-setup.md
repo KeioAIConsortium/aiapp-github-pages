@@ -109,7 +109,7 @@ ssh-keygen -t ed25519 -C "あなたのメールアドレス"
 * **Enter**を3回押す（パスフレーズは空でOK）
 * 公開鍵は `~/.ssh/id_ed25519.pub` に作成されます
 
-### ⚠️注意事項⚠️
+#### ⚠️注意事項⚠️
 
 - `.pub`がついているファイルは**公開鍵**で、他人に公開しても問題ありません
 - `.pub`がついて**いない**ファイルは**秘密鍵**で、絶対に他人に教えたり、Webサイト上に貼り付けたりしてはいけません
@@ -188,21 +188,21 @@ git push -u origin main # GitHub上のリポジトリに、ローカルでの変
 
 <details markdown="1"><summary>補足：💡mkdir, cd, echoコマンドの詳細</summary>
 
-### **mkdir**
+#### **mkdir**
 
 * `mkdir`は「make directory」の略で、新しいディレクトリ（フォルダー）を作成するコマンドです
 * 例：`mkdir my-site` は「my-site」という名前のディレクトリを作成します
 
 ---
 
-### **cd**
+#### **cd**
 
 * `cd`は「change directory」の略で、現在のディレクトリを変更するコマンドです
 * 例：`cd my-site` は「my-site」というディレクトリに移動します
 
 ---
 
-### **echo**
+#### **echo**
 
 * `echo`は指定した文字列を出力するコマンドです
 * 例：`echo "# my-site" >> README.md` は`README.md`というファイルに`# my-site`という行を追加します
@@ -237,6 +237,22 @@ Gemini CLIをインストールするために、`Node.js`という実行環境�
 
 ---
 
+#### 方法2: Homebrew（Macに慣れている方向け）
+
+1. **Homebrewインストール済み**か確認（なければ[公式](https://brew.sh/)）
+2. ターミナルで
+
+   ```bash
+   brew install node
+   ```
+3. 確認
+
+   ```bash
+   node -v
+   ```
+
+---
+
 ### **Windows**
 
 1. **公式サイトへアクセス**
@@ -260,20 +276,6 @@ Gemini CLIをインストールするために、`Node.js`という実行環境�
    バージョンが表示されればOK
 
 ---
-
-#### 方法2: Homebrew（Macに慣れている方向け）
-
-1. **Homebrewインストール済み**か確認（なければ[公式](https://brew.sh/)）
-2. ターミナルで
-
-   ```bash
-   brew install node
-   ```
-3. 確認
-
-   ```bash
-   node -v
-   ```
 
 <details markdown="1"><summary>補足：💡JavaScriptとNode.jsの関係</summary>
 

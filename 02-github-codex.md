@@ -11,10 +11,10 @@ GitHub Codespacesは、クラウド上で開発環境を提供するサービス
 
 ---
 
-# GitHub Codespacesとは
+## GitHub Codespacesとは
 
 GitHubが提供するクラウドの開発環境です。
-[GitHub Codespaces](https://github.co.jp/features/codespaces)
+[GitHub Codespaces](https://github.com/features/codespaces)
 
 * **環境構築不要**
   通常、プログラミングや開発を行う際は複数のツールをインストールする必要がありますが、Codespaces上のマシンには主要なツールがすでにインストールされています。
@@ -27,31 +27,31 @@ GitHubが提供するクラウドの開発環境です。
 
 ## GitHub Codespacesでの作業手順
 
-まずはじめに、GitHubでリポジトリを作成しましょう。
+まずはじめに、GitHubでテンプレートからリポジトリを作成しましょう。
 
-### GitHub リポジトリを新規作成
+### テンプレートからGitHub リポジトリを新規作成
 
 * リポジトリとは、Gitで管理しているフォルダー、ディレクトリのことです。
 
 <details markdown="1">
 <summary>補足：💡フォルダー、ディレクトリ、リポジトリの違い</summary>
 
-### **フォルダー**
+#### **フォルダー**
 
 * パソコンの中でファイルを入れる「入れ物」
 * 物理的なディレクトリ構造の見た目のこと
 
 ---
 
-### **ディレクトリ**
+#### **ディレクトリ**
 
 * フォルダーとほぼ同じ意味ですが、**コンピューター用語寄り**
 * ターミナルやコマンドラインで「今いる場所」を指すときに「ディレクトリ」と言う
-* 例：`cd my-site` は「my-site」というディレクトリに移動するという意味です。
+* 例：`cd my-ai-app` は「my-ai-app」というディレクトリに移動するという意味です。
 
 ---
 
-### **リポジトリ（Repository）**
+#### **リポジトリ（Repository）**
 
 * Gitで管理されているフォルダー（＋その中の履歴データ）
 * 普通のフォルダーとの違いは「中に `.git` という隠しフォルダーがあり、過去の履歴や設定が入っている」こと
@@ -59,23 +59,19 @@ GitHubが提供するクラウドの開発環境です。
 
 </details>
 
-1. [GitHub にログイン](https://github.com/login)し、右上の「＋」→ [**New repository**](https://github.com/new) をクリック
-   ![GitHub-New-Repo](./images/github-new-repo.png)
-2. Repository name に任意の名前（例：`my-site`）を入力し、`Add README` をオンにして、**Create repository** をクリックします。
-   ![GitHub-Create](./images/github-create-readme.png)
+1. [GitHub にログイン](https://github.com/login)
+2. [AIアプリ用のテンプレートリポジトリ](https://github.com/KeioAIConsortium/ai_app_template)のページにアクセスします。
+3. 右上の「Use this template」をクリックし、「Create a new repository」を選択します。
+   ![GitHub-Use-Template](./images/github-use-template.png)
+4. Repository name に任意の名前（例：`my-ai-app`）を入力し、**Create repository** をクリックします。
+   ![GitHub-Template-Create](./images/github-template-create.png)
+   ![GitHub-Template-Create-2](./images/github-template-create-btn.png)
 
----
-
-### Codespaceを起動
-
-1. 作成したリポジトリのトップページがこのようになっていることを確認します。
-   ![GitHub-Blank](./images/github-start.png)
-2. 右上の「＋」→ **New Codespace** をクリックします。
-   ![GitHub-Repo-Code](./images/github-repo-code.png)
-3. Codespace作成の設定画面に移行するので、Repositoryから先ほど作成したリポジトリを選択します。その他の設定はデフォルトのままでOKです。**Create codespace**をクリックします。
-   ![GitHub-Code-Settings](./images/github-code-settings.png)
+5. 右上のCode ボタンをクリックし、**Codespaces** タブを選択して、**Create codespace on main** をクリックします。
+   ![GitHub-Create-Codespace](./images/github-create-codespace.png)
 
 作成から起動までに1〜3分ほどかかる場合があります。ブラウザーは閉じずにそのまま待ちましょう。
+起動後、ターミナルに「Codex CLI is installed」と表示されるまで待ちましょう。
 
 <details markdown="1">
 <summary>Codespacesの料金について</summary>
@@ -107,39 +103,25 @@ Codespaces/VS Codeの画面構成について簡単に説明します。
 
 3. **ターミナル**
    画面下部に表示されるターミナルは、コマンドを実行するためのインターフェースです。ここでGitコマンドやnpmコマンドを実行して、プロジェクトの管理やビルドを行うことができます。
+   上部の「＋」ボタンをクリックすると、新しいターミナルを開くことができます。
 
----
+4. **(サイドバー)**
+   画面右側にサイドバーが表示される場合があります。サイドバーではVSCode内蔵のAIアシスタントを利用できますが、Codex CLIを使う場合は使用しません。
+   もしサイドバーが邪魔な場合は、右上の「×」ボタンで閉じることができます。
 
-# Codex CLIのインストール
+## Codex CLIの起動
 
-それでは実際にCodespaces上でCodex CLIを動かしてみましょう。
-
-まず、Codespacesのターミナルで以下のコマンドを実行し、Codex CLIをインストールします。
-実行は、このコマンドをターミナルに入力（コピー＆ペースト）し、Enterキーを押すことでできます。
-
-```bash
-npm i -g @openai/codex
-```
-
-このコマンドで、Codex CLIがCodespaces上のマシンにグローバルにインストールされます。
-
-![codespace-codex](./images/codespace-codex.png)
-
----
-
-# Codex CLIの起動
-
-インストールが完了したら、以下のコマンドでCodex CLIを起動します。
+「+」ボタンをクリックして新しいターミナルを開き、`bash` と表示されているタブで以下のコマンドを実行します。
 
 ```bash
 codex
 ```
 
-実行すると、以下のように回転するロゴが表示されます。
+実行すると、以下のようにログイン画面が表示されます。
 
 ![codex-start](./images/codex-start.png)
 
-![codex logo](./images/codex.gif)
+![codex select](./images/codex-select.png)
 
 この講義では、**APIキー**を使ってCodex CLIにサインインします。
 APIキーは、AIを使うための合言葉のようなものです。他人に見せたり、GitHubや公開ページに貼ったりしないでください。
@@ -188,7 +170,7 @@ node scripts/encrypt-class-api-key.mjs
 成功すると、上記のような画面になります。
 失敗する場合は、APIキーのコピー漏れや入力場所を確認してください。講義用APIキーを使っている場合は、先生やTAに確認しましょう。
 
-# 重要：モデルの選択
+## 重要：モデルの選択
 
 Codexでは、作業に使うAIのモデルを選べます。
 
@@ -234,7 +216,7 @@ Reasoning Levelを高くすると難しい問題をじっくり考えられま�
 ---
 
 前へ → [はじめに](./01-introduction.md)
-次へ → [Codex CLI でAIアプリ作成](./03-build-with-codex.md)
+次へ → [Codex CLIでシンプルなAIアプリを作成する](./03-build-with-codex.md)
 目次へ → [ホーム](./index.md)
 
 ---

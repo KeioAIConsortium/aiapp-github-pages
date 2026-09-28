@@ -90,8 +90,8 @@ Codexの入力欄で `/` を入力すると、使えるコマンドの一覧が�
 
 ---
 
-前へ → [CSS/JavaScriptで拡張](./05-your-ai-app.md)
-次へ → [Codex App](./07-codex-app.md)
+前へ → [自分の作りたいAIアプリを作成する](./05-your-ai-app.md)
+次へ → [エージェント Tips](./07-agent-tips.md)
 目次へ → [ホーム](./index.md)
 
 ---
