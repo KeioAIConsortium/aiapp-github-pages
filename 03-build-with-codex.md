@@ -3,11 +3,37 @@ layout: default
 title: Codex CLIでサイト作成
 ---
 
-# Codex CLIでWebサイトを作成する
+# Codex CLIでAIアプリを作成する
 
-Codex CLIのインストールが完了したら、実際にWebサイトを作っていきましょう。
+Codex CLIのインストールが完了したら、実際にAIアプリを作っていきましょう。
 
 ---
+
+## `agents.md`を作る
+
+AIアプリの開発にあたって、`agents.md`というファイルを作成します。
+リンク先の[agents.md]()をダウンロードします。
+
+codex-cliのタブに戻り、次のコマンドをコピペして、`agents.md`を作成します。
+```bash
+user> ! wget https://example.com/agents.md
+```
+
+### `agents.md`とは?
+`agents.md`は、Codexが理解するための指示書です。
+このファイルはCodexが必ず参照するもので、AIエージェントがどのように動くべきかを指示する内容を書きます。
+今回は以下のような内容を指示しています。
+
+* 実装に使用可能なAIモデルの種類
+* 生徒に指示された場合の対応方法
+* どのような技術を使ってAIアプリを作るか
+* どのような手順で実装するか
+
+興味がある方は、`agents.md`の内容を読んでみてください。
+
+### Tips: ! で始まるプロンプト
+! で始まるプロンプトは、ターミナル上で直接実行されるコマンドを意味します。
+例えば、`! ls` はターミナルで `ls` コマンドを実行することを意味します。
 
 ## Codexに依頼する
 
@@ -19,10 +45,10 @@ user> ここにCodexへのメッセージ、プロンプトが入ります。
 
 > 注: 上の `user>` は資料上の記法です。実際のCodex CLIには `user>` を付ける必要はありません。
 
-では、早速CodexにHTMLファイルを作ってもらいましょう。
+では、Codex CLIに次のように入力して、`agents.md`に従ってAIアプリを作成するよう依頼してみましょう。
 
 ```bash
-user> このリポジトリは、GitHub Pagesで公開する自分のWebサイトです。index.htmlを新規作成し、シンプルなHTMLを用意してください。
+user> このリポジトリは、GitHub Pagesで公開するAIアプリです。agents.mdに従い、デモとして画像認識を行うHTMLページを作成してください。
 ```
 
 ![Codex HTML](./images/index-codex.png)

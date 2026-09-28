@@ -192,13 +192,14 @@ node scripts/encrypt-class-api-key.mjs
 
 Codexでは、作業に使うAIのモデルを選べます。
 
-2026年8月現在のGPT-5.6系には、次の3つがあります。
+2026年9月現在のGPT-6系には、次の3つがあります。
 
-- `gpt-5.6-sol`：難しい作業が得意
-- `gpt-5.6-terra`：性能とコストのバランスを重視
-- `gpt-5.6-luna`：速さとコストを重視
+- `gpt-6-astra`：複雑な作業が得意
+- `gpt-6-sol`：難しい作業が得意
+- `gpt-6-terra`：性能とコストのバランスを重視
+- `gpt-6-luna`：速さとコストを重視
 
-**この講義では `gpt-5.6-luna` を使います。**
+**この講義では `gpt-6-luna` を使います。**
 
 Codexを起動している画面で、
 
@@ -233,7 +234,7 @@ Reasoning Levelを高くすると難しい問題をじっくり考えられま�
 ---
 
 前へ → [はじめに](./01-introduction.md)
-次へ → [Codex CLI でサイト作成](./03-build-with-codex.md)
+次へ → [Codex CLI でAIアプリ作成](./03-build-with-codex.md)
 目次へ → [ホーム](./index.md)
 
 ---

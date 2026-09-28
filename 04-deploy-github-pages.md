@@ -103,7 +103,7 @@ Webページに変更を加えてpushした後、何らかの理由でデプロ�
 - `Settings → Pages` が表示されない、またはグレーアウトしている場合は、権限設定やリポジトリの可視性、組織ポリシーを確認してください。
 
 前へ → [Codex CLIでサイト作成](./03-build-with-codex.md)
-次へ → [CSS/JavaScript で拡張](./05-style-and-js.md)
+次へ → [自分の作りたいAIアプリを作成する](./05-your-ai-app.md)
 目次へ → [ホーム](./index.md)
 
 ---

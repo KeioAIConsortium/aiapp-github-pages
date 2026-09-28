@@ -90,7 +90,7 @@ Codexの入力欄で `/` を入力すると、使えるコマンドの一覧が�
 
 ---
 
-前へ → [CSS/JavaScriptで拡張](./05-style-and-js.md)
+前へ → [CSS/JavaScriptで拡張](./05-your-ai-app.md)
 次へ → [Codex App](./07-codex-app.md)
 目次へ → [ホーム](./index.md)
 
