@@ -1,6 +1,6 @@
 title: AIエージェントでWebサイトをつくろう
 url: "https://keioaiconsortium.github.io"
-baseurl: "aiapp-github-pages"
+baseurl: "/aiapp-github-pages"
 theme: jekyll-theme-slate
 markdown: GFM
 include:
